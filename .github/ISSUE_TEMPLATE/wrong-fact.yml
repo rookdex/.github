@@ -1,0 +1,46 @@
+name: Wrong or outdated fact
+description: An item, guide or news entry says something that isn't right, or is missing.
+labels: [content]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rookdex only states what a trusted source backs up. That means Rockstar and Take-Two, or established gaming press. Fan wikis, forums and leak sites don't count. The full list is in [allowlist.json](https://github.com/rookdex/rookdex/blob/main/allowlist.json).
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: The item name or the page address.
+      placeholder: https://rookdex.app/en/tracker/
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should it say?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link that backs up the correction, from Rockstar, Take-Two or the press on the allowlist.
+      placeholder: https://www.rockstargames.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Which language is it wrong in?
+      options:
+        - Both
+        - English only
+        - Norsk only
+    validations:
+      required: true

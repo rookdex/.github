@@ -1,0 +1,63 @@
+name: Bug report
+description: Something in Rookdex is broken or behaves oddly.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Rookdex keeps your progress on your device, so please don't paste exported data or anything personal here.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, as you saw it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, how?
+      placeholder: |
+        1. Open the tracker
+        2. Tick an item
+        3. ...
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page where it happened.
+      placeholder: https://rookdex.app/en/tracker/
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: Pixel 9, Chrome
+    validations:
+      required: true
+  - type: dropdown
+    id: installed
+    attributes:
+      label: Installed as an app?
+      description: Did you add Rookdex to your home screen or desktop?
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - English
+        - Norsk
+    validations:
+      required: true
